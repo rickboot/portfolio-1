@@ -5,7 +5,6 @@ import ThemeSwitch from '@/components/ThemeSwitch';
 import ActiveSectionContextProvider from '@/contexts/active-section-context';
 import ThemeContextProvider from '@/contexts/theme-context';
 import { Toaster } from 'react-hot-toast';
-
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='scroll-smooth'>
+    <html lang='en' className='dark scroll-smooth'>
       <body
         className={`${inter.className} bg-slate-100 pt-24 text-[--shadowfax-white] dark:bg-[--raven-black]  sm:pt-32`}
       >
-        {/* background tint */}
         <div className='absolute right-[-20rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-30 blur-[10rem] sm:w-[68.75rem]'></div>
+
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Nav />

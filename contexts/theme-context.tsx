@@ -18,7 +18,7 @@ export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
   type Theme = 'light' | 'dark';
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
 
   const toggleTheme = () => {
     if (theme === 'dark') {
@@ -35,14 +35,14 @@ export default function ThemeContextProvider({
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme') as Theme | null;
 
-    if (localTheme) {
-      setTheme(localTheme);
+    if (localStorage.theme === 'light') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
     } else {
-      if (localStorage.theme === 'dark') {
-        setTheme('dark');
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.classList.add('dark');
-      }
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
