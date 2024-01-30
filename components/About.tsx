@@ -16,7 +16,7 @@ export default function About() {
     >
       <SectionHeader>About Me</SectionHeader>
 
-      <p className='text-slate-300 text-md mb-3 text-center font-light text-[1rem]'>
+      <p className='text-[#9EA3A5] text-md mb-3 text-center font-light text-[1rem]'>
         I am a problem solver who loves to code. My tools of choice are React
         and Next.js, backed by a strong knowledge of HTML5/CSS3, JavaScript, and
         TypeScript. With over two decades of diverse tech experience in startups

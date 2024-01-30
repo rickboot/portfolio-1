@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import ActiveSectionContextProvider from '@/contexts/active-section-context';
 import ThemeContextProvider from '@/contexts/theme-context';
+import { Toaster } from 'react-hot-toast';
 
 // fonts
 import { Inter } from 'next/font/google';
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='scroll-smooth'>
       <body
-        className={`${inter.className} bg-[#0F172A] text--950 dark:bg-slate-100 dark:text-slate-900  pt-24 sm:pt-32`}
+        className={`${inter.className} bg-[#111] text-[#DEE3E5] dark:bg-slate-100 dark:text-slate-900  pt-24 sm:pt-32`}
       >
         {/* background tint */}
         <div className='bg-[#19334F]  absolute top-[-10rem] -z-10 right-[-20rem] h-[30rem] w-[2rem] rounded-full blur-[10rem] sm:w-[68.75rem] opacity-30'></div>
@@ -33,6 +34,7 @@ export default function RootLayout({
             {children}
             <Footer />
             <ThemeSwitch />
+            <Toaster position='top-center' />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
