@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { projectsData } from "@/lib/data";
+import React, { useRef } from 'react';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { projectsData } from '@/lib/data';
 
 type ProjectCardProps = (typeof projectsData)[number];
 
@@ -17,7 +17,7 @@ export function ProjectCard({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "1.3 1"],
+    offset: ['start end', '1.3 1'],
   });
 
   const opacityValue = useTransform(scrollYProgress, [0, 1], [0.2, 1]);

@@ -33,5 +33,12 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "singleQuote": true,
+    "jsxSingleQuote": true
   }
 }

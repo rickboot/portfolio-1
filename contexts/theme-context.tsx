@@ -1,18 +1,15 @@
-"use client";
-import React, { createContext, useContext, useEffect, useState } from "react";
+'use client';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-// types
-type Theme = "light" | "dark";
+type Theme = 'light' | 'dark';
 
 type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
 
-// context
 export const ThemeContext = createContext<ThemeContextType | null>(null);
 
-// context provider
 type ThemeContextProviderProps = {
   children: React.ReactNode;
 };
@@ -20,31 +17,31 @@ type ThemeContextProviderProps = {
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  type Theme = "light" | "dark";
-  const [theme, setTheme] = useState<Theme>("dark");
+  type Theme = 'light' | 'dark';
+  const [theme, setTheme] = useState<Theme>('light');
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
+    if (theme === 'dark') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
     } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
     }
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
+    const localTheme = window.localStorage.getItem('theme') as Theme | null;
 
     if (localTheme) {
       setTheme(localTheme);
     } else {
-      if (localStorage.theme === "dark") {
-        setTheme("dark");
-        localStorage.setItem("theme", "dark");
-        document.documentElement.classList.add("dark");
+      if (localStorage.theme === 'dark') {
+        setTheme('dark');
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark');
       }
     }
   }, []);
@@ -66,7 +63,7 @@ export function useThemeContext() {
 
   if (context === null) {
     throw new Error(
-      "useThemeContext must be used within a ThemeContextProvider",
+      'useThemeContext must be used within a ThemeContextProvider',
     );
   }
 
