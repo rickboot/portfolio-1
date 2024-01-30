@@ -70,7 +70,7 @@ export default function Contact() {
           <textarea
             id='message'
             name='message'
-            className='h-40 rounded-lg border border-slate-500 bg-slate-200 px-3 py-2 text-sm text-[--raven-black]'
+            className='h-40 rounded-lg border border-[--misty-gray] bg-slate-200 px-3 py-2 text-sm text-[--raven-black]'
             placeholder='Enter message here...'
             maxLength={1000}
           />
