@@ -1,13 +1,13 @@
-'use client';
-import { useActiveSectionContext } from '@/contexts/active-section-context';
-import { UseInViewOptions, useInView } from 'framer-motion';
-import { links } from '@/lib/data';
-import { useEffect } from 'react';
+"use client";
+import { useActiveSectionContext } from "@/contexts/active-section-context";
+import { UseInViewOptions, useInView } from "framer-motion";
+import { links } from "@/lib/data";
+import { useEffect } from "react";
 
 export function useSectionInView(
   ref: React.RefObject<HTMLElement>,
-  sectionName: (typeof links)[number]['name'],
-  amountInView: UseInViewOptions['amount']
+  sectionName: (typeof links)[number]["name"],
+  amountInView: UseInViewOptions["amount"],
 ): void {
   const inView = useInView(ref, { amount: amountInView });
 

@@ -1,22 +1,22 @@
-'use client';
-import React, { use, useEffect, useRef } from 'react';
-import SectionHeader from './SectionHeader';
+"use client";
+import React, { use, useEffect, useRef } from "react";
+import SectionHeader from "../SectionHeader";
 
-import { useSectionInView } from '@/lib/hooks';
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
   const ref = useRef(null);
-  useSectionInView(ref, 'About', 1);
+  useSectionInView(ref, "About", 1);
 
   return (
     <section
       ref={ref}
-      id='about'
-      className='max-w-[40rem] text-white text-center leading-8 scroll-mt-28 sm:mb-3'
+      id="about"
+      className="max-w-[40rem] scroll-mt-28 sm:mb-3"
     >
       <SectionHeader>About Me</SectionHeader>
 
-      <p className='text-[#9EA3A5] text-md mb-3 text-center font-light text-[1rem]'>
+      <p className="text-md mb-3 text-center text-[1rem] font-light leading-8 text-[--shadowfax-white] dark:text-[--raven-black]">
         I am a problem solver who loves to code. My tools of choice are React
         and Next.js, backed by a strong knowledge of HTML5/CSS3, JavaScript, and
         TypeScript. With over two decades of diverse tech experience in startups

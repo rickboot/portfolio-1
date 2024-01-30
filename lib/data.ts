@@ -1,108 +1,108 @@
-import React from 'react';
-import { CgWorkAlt } from 'react-icons/cg';
-import { FaReact } from 'react-icons/fa';
-import { LuGraduationCap } from 'react-icons/lu';
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
+import corpcommentImg from "@/public/corpcomment.png";
+import rmtdevImg from "@/public/rmtdev.png";
+import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
-    name: 'Home',
-    hash: '#home',
+    name: "Home",
+    hash: "#home",
   },
   {
-    name: 'About',
-    hash: '#about',
+    name: "About",
+    hash: "#about",
   },
   {
-    name: 'Projects',
-    hash: '#projects',
+    name: "Projects",
+    hash: "#projects",
   },
   {
-    name: 'Skills',
-    hash: '#skills',
+    name: "Skills",
+    hash: "#skills",
   },
   {
-    name: 'Experience',
-    hash: '#experience',
+    name: "Experience",
+    hash: "#experience",
   },
   {
-    name: 'Contact',
-    hash: '#contact',
+    name: "Contact",
+    hash: "#contact",
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Hack Reactor - Coding Bootcamp',
-    location: 'San Jose, CA',
-    description:
-      "After an 8-week pre-course to refresh my programming skills in HTML, CSS, and JavaScript, I attended Hack Reactor's Software Engineering Immersive. For over 11 hours a day, six days a week, for 3 months, I worked alongside other engineers under the guidance of senior software engineers. We utilized industry best practices with Git, Agile, Scrum, and testing, building full-stack apps using React, Node.js, PostgreSQL, MongoDB, and more.",
-    icon: React.createElement(LuGraduationCap),
-    date: '2020',
-  },
-  {
-    title: 'Mobile Software Engineer, iOS/Android',
-    location: 'San Francisco, CA',
+    title: "Mobile Software Engineer, iOS/Android",
+    location: "San Francisco, CA",
     description:
       "I developed a mobile wellness app for iOS and Android using Flutter and Dart, with Google Firebase and Firestore for backend. Collaborated with a UI/UX designer and product manager to create a pixel-perfect app based on Figma mock-ups. In scrum meetings, worked with engineers and product managers to prioritize features, bugs, and tickets for weekly sprints. Led animation integration using Rive to enhance the user experience and improve the app's look and feel.",
     icon: React.createElement(CgWorkAlt),
-    date: '2021',
+    date: "2021",
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: "Hack Reactor - Coding Bootcamp",
+    location: "San Jose, CA",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "After an 8-week pre-course to refresh my programming skills in HTML, CSS, and JavaScript, I attended Hack Reactor's Software Engineering Immersive. For over 11 hours a day, six days a week, for 3 months, I worked alongside other engineers under the guidance of senior software engineers. We utilized industry best practices with Git, Agile, Scrum, and testing, building full-stack apps using React, Node.js, PostgreSQL, MongoDB, and more.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2020",
+  },
+  {
+    title: "Software Engineer - Contractor",
+    location: "SF Bay Area",
+    description:
+      "Conceptualized, designed and developed websites using HTML/CSS and JavaScript. Also, developed installation, configuration, and diagnostic software for PC hardware using C and assembly code.",
     icon: React.createElement(FaReact),
-    date: '2021 - present',
+    date: "2021 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: "CorpComment",
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
+      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: corpcommentImg,
   },
   {
-    title: 'rmtDev',
+    title: "rmtDev",
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
   },
   {
-    title: 'Word Analytics',
+    title: "Word Analytics",
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: wordanalyticsImg,
   },
 ] as const;
 
 export const skillsData = [
-  'React',
-  'Next.js',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'Node.js',
-  'Tailwind',
-  'Git',
-  'Prisma',
-  'MongoDB',
-  'PostgreSQL',
-  'Redux',
-  'Express',
-  'Python',
-  'Framer Motion',
-  'Docker',
-  'AWS',
+  "React",
+  "Next.js",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Node.js",
+  "Tailwind",
+  "Git",
+  "Prisma",
+  "MongoDB",
+  "PostgreSQL",
+  "Redux",
+  "Express",
+  "Python",
+  "Framer Motion",
+  "Docker",
+  "AWS",
 ] as const;
 
 /*

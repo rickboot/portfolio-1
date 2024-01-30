@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.verticalTimelineDate {
-  color: white;
+@layer base {
+  .verticalTimelineDate {
+    color: white;
+  }
+}
+
+:root {
+  --daphne-blue: #00bcee;
+  --sonic-blue: #81d7f7;
+  --gray-blue: #788ca7;
+  --shadowfax-white: #dee4e5;
+  --misty-gray: #9ea4a5;
+  --raven-black: #111;
 }
