@@ -13,6 +13,7 @@ export function ProjectCard({
   description,
   tags,
   imageUrl,
+  siteUrl,
 }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -51,8 +52,17 @@ export function ProjectCard({
             {subtitle}
           </h4>
           <p className='text-[--shadowfax-white]] mt-1 whitespace-break-spaces text-[.7rem] tracking-wide'>
-            {description}
+            {description}{' '}
           </p>
+          {siteUrl !== '#' && (
+            <a
+              href={siteUrl}
+              target='_blank'
+              className='mt-3 text-[.8rem] text-[--daphne-blue] underline'
+            >
+              See it!
+            </a>
+          )}
 
           <ul className='mt-5 flex flex-wrap gap-x-3 gap-y-2'>
             {tags.map((tag) => (

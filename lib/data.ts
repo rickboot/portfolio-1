@@ -77,6 +77,7 @@ export const projectsData = [
       'Emotion',
     ],
     imageUrl: Finanseer,
+    siteUrl: 'https://fin-dashboard.vercel.app',
   },
   {
     title: 'Microservice for Questions',
@@ -87,6 +88,7 @@ Designed and built a pixel-perfect clone of zwilling.com for Questions & Answers
 \nUsed Figma to design wireframes to plan component hierarchy.`,
     tags: ['React', 'JavaScript ES6', 'HTML/CSS', 'CSS Modules', 'Figma'],
     imageUrl: unZwillingFrontend,
+    siteUrl: '#',
   },
   {
     title: 'Microservice for Reviews',
@@ -107,6 +109,7 @@ Designed and developed REST API and database for handling user-generated product
       'NGINX',
     ],
     imageUrl: unZwillingBackend,
+    siteUrl: '#',
   },
 ] as const;
 
