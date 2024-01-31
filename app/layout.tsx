@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import ThemeSwitch from '@/components/ThemeSwitch';
@@ -35,6 +36,7 @@ export default function RootLayout({
             <Toaster position='top-center' />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <Analytics />
       </body>
     </html>
   );
