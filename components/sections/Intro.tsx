@@ -1,11 +1,10 @@
 'use client';
-import React, { use, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
-import { useThemeContext } from '@/contexts/theme-context';
 
 export default function Intro() {
   const ref = useRef(null);
@@ -25,7 +24,7 @@ export default function Intro() {
           }}
         >
           <Image
-            className='h-32 w-32 rounded-full border-[0.1rem] border-[[--shadowfax-white]] object-cover shadow-lg shadow-white/[0.2]'
+            className='h-32 w-32 rounded-full border-[0.1rem] border-[--shadowfax-white] object-cover shadow-lg shadow-white/[0.2]'
             src='/rick.png'
             alt='Rick'
             width='100'
@@ -36,7 +35,7 @@ export default function Intro() {
         </motion.h1>
       </div>
 
-      <p className='mt-10 px-48 text-center text-[2rem] font-medium text-[--raven-black] dark:text-[--shadowfax-white]'>
+      <p className='mt-10 px-4 text-center text-[2rem] font-medium text-[--raven-black] dark:text-[--shadowfax-white] sm:px-16 lg:px-48'>
         Full-Stack Software Developer
       </p>
 
@@ -71,6 +70,8 @@ export default function Intro() {
         <a
           href='https://www.linkedin.com/in/rickallen7/'
           target='_blank'
+          rel='noopener noreferrer'
+          aria-label='LinkedIn'
           className='items-center rounded-full bg-[--daphne-blue]  p-2 text-[--raven-black] outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90 '
         >
           <BsLinkedin className='text-[1.2rem]' />
@@ -79,6 +80,8 @@ export default function Intro() {
         <a
           href='https://github.com/rickboot'
           target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Github'
           className='items-center rounded-full bg-[--daphne-blue]  p-2 text-[--raven-black] outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90 '
         >
           <FaGithubSquare className='text-[1.2rem]' />

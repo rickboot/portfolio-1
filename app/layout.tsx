@@ -7,6 +7,7 @@ import ActiveSectionContextProvider from '@/contexts/active-section-context';
 import ThemeContextProvider from '@/contexts/theme-context';
 import { Toaster } from 'react-hot-toast';
 import { Inter } from 'next/font/google';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -23,9 +24,13 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark scroll-smooth'>
       <body
-        className={`${inter.className} bg-slate-100 pt-24 text-[--shadowfax-white] dark:bg-[--raven-black]  sm:pt-32`}
+        className={`${inter.className} bg-slate-100 pt-24 text-[--shadowfax-white] dark:bg-[--raven-black] sm:pt-32`}
       >
-        <div className='absolute right-[-20rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-30 blur-[10rem] sm:w-[68.75rem]'></div>
+        {/* Ambient glow effect */}
+        <div
+          className='absolute right-[-20rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-30 blur-[10rem] sm:w-[68.75rem]'
+          aria-hidden='true'
+        />
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
@@ -35,8 +40,8 @@ export default function RootLayout({
             <ThemeSwitch />
             <Toaster position='top-center' />
           </ActiveSectionContextProvider>
+          <Analytics />
         </ThemeContextProvider>
-        <Analytics />
       </body>
     </html>
   );

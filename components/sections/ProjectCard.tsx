@@ -28,36 +28,26 @@ export function ProjectCard({
   return (
     <motion.div
       ref={ref}
-      style={{
-        opacity: opacityValue,
-        scale: scaleValue,
-      }}
+      style={{ opacity: opacityValue, scale: scaleValue }}
       className='group'
     >
-      <section
-        className='relative overflow-hidden rounded-lg border border-slate-500 bg-slate-800 px-8 py-6 transition 
-      hover:scale-[1.02] hover:brightness-110 sm:max-w-[40rem]'
-      >
-        <div
-          className='flex flex-col
-        sm:ml-[20rem]
-        sm:group-even:ml-0
-        sm:group-even:pr-[20rem]
-      '
-        >
+      <section className='relative overflow-hidden rounded-lg border border-slate-500 bg-slate-800 px-8 py-6 transition hover:scale-[1.02] hover:brightness-110 sm:max-w-[40rem]'>
+        <div className='flex flex-col sm:ml-[20rem] sm:group-even:ml-0 sm:group-even:pr-[20rem]'>
           <h3 className='text-[1.2rem] font-semibold text-[--shadowfax-white]'>
             {title}
           </h3>
           <h4 className='text-[1rem] font-semibold text-[--shadowfax-white]'>
             {subtitle}
           </h4>
-          <p className='text-[--shadowfax-white]] mt-1 whitespace-break-spaces text-[.7rem] tracking-wide'>
-            {description}{' '}
+          <p className='mt-1 whitespace-break-spaces text-[.7rem] tracking-wide text-[--shadowfax-white]'>
+            {description}
           </p>
-          {siteUrl !== '#' && (
+
+          {siteUrl && siteUrl !== '#' && (
             <a
               href={siteUrl}
               target='_blank'
+              rel='noopener noreferrer'
               className='mt-3 text-[.8rem] text-[--daphne-blue] underline'
             >
               See it!
@@ -77,16 +67,12 @@ export function ProjectCard({
         </div>
 
         <Image
-          className='absolute right-[22rem] top-8 hidden rounded-lg transition duration-200
-        group-even:left-[22rem]
-        group-hover:rotate-[2deg]
-        group-hover:scale-105
-        group-hover:group-even:rotate-[-2deg]
-        sm:block
-        '
+          className='absolute right-[22rem] top-8 hidden rounded-lg transition duration-200 group-even:left-[22rem] group-hover:rotate-[2deg] group-hover:scale-105 group-hover:group-even:rotate-[-2deg] sm:block'
           src={imageUrl}
-          alt={title}
+          alt={`${title} project screenshot`}
           quality={95}
+          width={300}
+          height={200}
         />
       </section>
     </motion.div>

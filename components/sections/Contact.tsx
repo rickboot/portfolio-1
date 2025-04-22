@@ -1,6 +1,6 @@
 'use client';
 
-import React, { use, useRef } from 'react';
+import React, { useRef } from 'react';
 import SectionHeader from '../SectionHeader';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
@@ -11,6 +11,15 @@ import { getErrorMessage } from '@/lib/utils';
 export default function Contact() {
   const ref = useRef(null);
   useSectionInView(ref, 'Contact', 0.5);
+
+  async function handleSubmit(formData: FormData) {
+    const { error } = await sendEmail(formData);
+    if (error) {
+      toast.error(getErrorMessage(error));
+    } else {
+      toast.success('Email sent!');
+    }
+  }
 
   return (
     <motion.section
@@ -31,19 +40,7 @@ export default function Contact() {
           </a>
         </p>
 
-        <form
-          action={async (formData) => {
-            const { error } = await sendEmail(formData);
-
-            if (error) {
-              toast.error(getErrorMessage(error));
-              return;
-            }
-
-            toast.success('Email sent!');
-          }}
-          className='mt-6 flex flex-col'
-        >
+        <form action={handleSubmit} className='mt-6 flex flex-col'>
           <label
             htmlFor='email'
             className='mb-2 mt-4 px-1 text-[0.8rem] text-[--raven-black] dark:text-[--shadowfax-white]'
@@ -70,16 +67,17 @@ export default function Contact() {
           <textarea
             id='message'
             name='message'
-            className='h-40 rounded-lg border border-[--misty-gray] bg-slate-200 px-3 py-2 text-sm text-[--raven-black]'
             placeholder='Enter message here...'
             maxLength={1000}
+            className='h-40 rounded-lg border border-[--misty-gray] bg-slate-200 px-3 py-2 text-sm text-[--raven-black]'
           />
 
           <button
             name='submit'
             type='submit'
             className='m-auto mt-7 w-[8rem] rounded-lg bg-[--daphne-blue] p-2 text-[--raven-black] outline-none
-            duration-200 ease-in-out hover:scale-105 hover:opacity-80 hover:transition'
+              duration-200 ease-in-out hover:scale-105 hover:opacity-80 hover:transition'
+            aria-label='Submit contact form'
           >
             Submit
           </button>
