@@ -51,7 +51,7 @@ export default function Intro() {
         }}
       >
         <a
-          href='https://drive.google.com/uc?export=download&id=1W9SzH2MGlBl2AgXhaeZGz08uczw6M3pA'
+          href='https://drive.google.com/file/d/17BbUlqIwkmL7JTemTS8xkmhlOEqedeq0/view?usp=drive_link'
           download='true'
           className='items-center rounded-full bg-[--daphne-blue] px-4 py-1 text-[.9rem] text-[--raven-black]
           outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90'

@@ -1,6 +1,5 @@
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
-import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 import Finanseer from '@/public/Finanseer.png';
 import unZwillingFrontend from '@/public/unZwilling-frontend-questions.png';
@@ -35,32 +34,64 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Mobile Software Engineer, iOS/Android',
+    title: 'Full-Stack Developer & Product Owner, ShadowForge',
+    location: 'Remote',
+    description:
+      'Built a Next.js 15 web app that converts D&D 5e content to Shadowdark RPG format using OpenAI. Implemented chunk-based input logic, markdown rendering, token tracking, and roadmap tooling.',
+    icon: React.createElement(CgWorkAlt),
+    date: '2024 – Present',
+  },
+  {
+    title: 'Product Owner / Strategy Lead, Solver AI',
+    location: 'Sunnyvale, CA',
+    description:
+      'Led development of AI ad generation MVP using OpenAI and Stable Diffusion. Built brand scrapers, designed prompt workflows, and owned GTM planning and product roadmap.',
+    icon: React.createElement(CgWorkAlt),
+    date: '2024',
+  },
+  {
+    title: 'Mobile Software Engineer, Revery Labs',
     location: 'San Francisco, CA',
     description:
-      "I developed a mobile wellness app for iOS and Android using Flutter and Dart, with Google Firebase and Firestore for backend. Collaborated with a UI/UX designer and product manager to create a pixel-perfect app based on Figma mock-ups. In scrum meetings, worked with engineers and product managers to prioritize features, bugs, and tickets for weekly sprints. Led animation integration using Rive to enhance the user experience and improve the app's look and feel.",
+      'Shipped a cross-platform wellness app using Flutter and Firebase. Implemented UI from Figma designs, added animation via Rive, and contributed to early product roadmap.',
     icon: React.createElement(CgWorkAlt),
     date: '2021',
   },
   {
-    title: 'Hack Reactor - Coding Bootcamp',
-    location: 'San Jose, CA',
+    title: 'Microservices Engineer (Capstone), Hack Reactor',
+    location: 'Remote',
     description:
-      "After an 8-week pre-course to refresh my programming skills in HTML, CSS, and JavaScript, I attended Hack Reactor's Software Engineering Immersive. For over 11 hours a day, six days a week, for 3 months, I worked alongside other engineers under the guidance of senior software engineers. We utilized industry best practices with Git, Agile, Scrum, and testing, building full-stack apps using React, Node.js, PostgreSQL, MongoDB, and more.",
-    icon: React.createElement(LuGraduationCap),
-    date: '2020',
+      'Designed and deployed a backend service using Node.js, MongoDB, and Docker. Load-tested to 5K RPS with NGINX. Built supporting frontend and dev tooling.',
+    icon: React.createElement(CgWorkAlt),
+    date: '2023',
   },
   {
-    title: 'Software Engineer - Freelance',
-    location: 'SF Bay Area',
+    title: 'Hack Reactor – Advanced Software Engineering',
+    location: 'San Jose, CA',
     description:
-      'Conceptualized, designed and developed websites using HTML/CSS and JavaScript. Also, developed installation, configuration, and diagnostic software for PC hardware using C and assembly code.',
-    icon: React.createElement(CgWorkAlt),
-    date: '1991-1992, 2000',
+      'Completed full-time immersive focused on full-stack JavaScript, React, Node.js, and modern software development best practices.',
+    icon: React.createElement(LuGraduationCap),
+    date: '2020',
   },
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'ShadowForge',
+    subtitle: 'AI-assisted 5e to Shadowdark RPG converter',
+    description:
+      'ShadowForge converts D&D 5e adventures into Shadowdark RPG format using OpenAI. Built with Next.js, Tailwind v4, and TypeScript, it features token-aware chunking, markdown output, and client-side token tracking. Designed for future support of prompt routing and memory-aware AI refinement.',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS v4',
+      'OpenAI',
+      'LLM',
+      'Markdown',
+    ],
+    imageUrl: '/shadowforge.png',
+    siteUrl: 'https://shadowforge.vercel.app',
+  },
   {
     title: 'Finance Dashboard',
     subtitle: 'Full-Stack',

@@ -16,31 +16,38 @@ export default function Experience() {
   return (
     <section id='experience' ref={ref} className='max-w-[68rem] scroll-mt-28'>
       <SectionHeader>Experience</SectionHeader>
-
       <VerticalTimeline lineColor='#788ca7'>
-        {experiencesData.map((experience) => (
-          <VerticalTimelineElement
-            key={experience.title}
-            date={experience.date}
-            dateClassName='verticalTimelineDate'
-            iconStyle={{ background: '#214F6F', color: '#dee4e5' }}
-            contentArrowStyle={{ borderRight: '9px solid #fff' }}
-            contentStyle={{
-              background: '#788CA7',
-              boxShadow: 'none',
-              border: '1px solid #dee4e5',
-            }}
-          >
-            <h3 className='text-xl font-bold capitalize text-white'>
-              {experience.title}
-            </h3>
-            <p className='!mt-0 !text-sm font-normal text-white'>
-              {experience.location}
-            </p>
-            <p className='!text-sm !font-normal text-black'>
-              {experience.description}
-            </p>
-          </VerticalTimelineElement>
+        {experiencesData.map((experience, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              contentStyle={{
+                background: '#1e293b',
+                boxShadow: 'none',
+                border: '1px solid #dee4e5',
+              }}
+              date={experience.date}
+              dateClassName={'verticalTimelineDate'}
+              iconStyle={{
+                background: '#214F6F',
+                color: '#dee4e5',
+              }}
+              icon={experience.icon}
+              contentArrowStyle={{
+                borderRight: '9px solid #fff',
+              }}
+              visible={true}
+            >
+              <h3 className='text-xl font-bold capitalize text-white'>
+                {experience.title}
+              </h3>
+              <p className='!mt-0 !text-sm font-normal text-white'>
+                {experience.location}
+              </p>
+              <p className='!text-sm !font-normal text-[--shadowfax-white]'>
+                {experience.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
       </VerticalTimeline>
     </section>
