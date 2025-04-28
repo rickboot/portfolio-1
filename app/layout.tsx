@@ -27,10 +27,10 @@ export default function RootLayout({
         className={`${inter.className} bg-slate-100 pt-24 text-[--shadowfax-white] dark:bg-[--raven-black] sm:pt-32`}
       >
         {/* Ambient glow effect */}
-        <div
+        {/* <div
           className='absolute right-[-20rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-30 blur-[10rem] sm:w-[68.75rem]'
           aria-hidden='true'
-        />
+        /> */}
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
