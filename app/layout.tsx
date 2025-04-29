@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         {/* Ambient glow effect */}
         <div
-          className='fixed right-[-11rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-30 blur-[10rem] sm:right-[-20rem] sm:w-[68.75rem]'
+          className='fixed right-[-11rem] top-[-10rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-40 blur-[10rem] sm:right-[-20rem] sm:w-[68.75rem]'
           aria-hidden='true'
         />
 
