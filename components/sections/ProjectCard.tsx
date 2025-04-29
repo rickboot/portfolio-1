@@ -58,7 +58,7 @@ export function ProjectCard({
             {tags.map((tag) => (
               <li
                 key={tag}
-                className='rounded-md bg-[--daphne-blue] px-2 py-1 text-[0.8rem] tracking-wide text-[--raven-black]'
+                className='rounded-md bg-[--shadowfax-white] px-2 py-1 text-[0.8rem] tracking-wide text-[--raven-black]'
               >
                 {tag}
               </li>

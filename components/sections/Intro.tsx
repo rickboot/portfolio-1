@@ -40,7 +40,7 @@ export default function Intro() {
       </p>
 
       <motion.div
-        className='mt-10 flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row'
+        className='mt-10 flex items-center justify-center gap-4 px-4 text-lg font-medium'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

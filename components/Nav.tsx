@@ -18,7 +18,7 @@ export default function Nav() {
         bg-[--daphne-blue]
         shadow-lg shadow-black/[0.03] 
         backdrop-blur-[0.5rem] sm:top-5 
-        sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full'
+        sm:h-[3.25rem] sm:w-[36rem] sm:rounded-lg'
         initial={{ x: '-50%', y: -100, opacity: 0 }}
         animate={{ x: '-50%', y: 0, opacity: 1 }}
       ></motion.div>
@@ -39,13 +39,15 @@ export default function Nav() {
                     setLastTimeActiveSectionChanged(Date.now());
                   }}
                   className={clsx(
-                    'flex w-full items-center justify-center px-3 py-3 transition hover:text-[--raven-black]',
+                    'flex w-full items-center justify-center px-3 py-3 transition duration-200 ease-in-out hover:opacity-80',
                     { 'text-[--raven-black]': activeSection === link.name },
                   )}
                 >
-                  {link.name}
+                  <span className='transition duration-200 ease-in-out hover:scale-110'>
+                    {link.name}
+                  </span>
                   {link.name === activeSection && (
-                    <span className='absolute inset-0 -z-10 rounded-full bg-black/20'></span>
+                    <span className='absolute inset-0 -z-10 rounded-md bg-black/10'></span>
                   )}
                 </Link>
               </motion.li>

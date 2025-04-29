@@ -75,8 +75,7 @@ export default function Contact() {
           <button
             name='submit'
             type='submit'
-            className='m-auto mt-7 w-[8rem] rounded-lg bg-[--daphne-blue] p-2 text-[--raven-black] outline-none
-              duration-200 ease-in-out hover:scale-105 hover:opacity-80 hover:transition'
+            className='m-auto mt-7 w-[8rem] rounded-lg bg-[--daphne-blue] p-2 text-[--raven-black] outline-none transition hover:scale-105 hover:opacity-90'
             aria-label='Submit contact form'
           >
             Submit
