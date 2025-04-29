@@ -24,7 +24,7 @@ export default function Intro() {
           }}
         >
           <Image
-            className='h-32 w-32 rounded-full border-[0.1rem] border-[--shadowfax-white] object-cover shadow-lg shadow-white/[0.2]'
+            className='h-32 w-32 rounded-full border-[0.25rem] border-[--daphne-blue] object-cover shadow-lg shadow-white/[0.2]'
             src='/rick.png'
             alt='Rick'
             width='100'
