@@ -91,6 +91,7 @@ export const projectsData = [
     ],
     imageUrl: '/shadowforge.png',
     siteUrl: 'https://shadow-forge.vercel.app',
+    repoUrl: 'https://github.com/rickboot/ShadowForge',
   },
   {
     title: 'Finance Dashboard',
@@ -109,6 +110,7 @@ export const projectsData = [
     ],
     imageUrl: Finanseer,
     siteUrl: 'https://fin-dashboard.vercel.app',
+    repoUrl: '#',
   },
   {
     title: 'Microservice for Questions',
@@ -119,6 +121,7 @@ Designed and built a pixel-perfect clone of zwilling.com for Questions & Answers
 \nUsed Figma to design wireframes to plan component hierarchy.`,
     tags: ['React', 'JavaScript ES6', 'HTML/CSS', 'CSS Modules', 'Figma'],
     imageUrl: unZwillingFrontend,
+    repoUrl: '#',
     siteUrl: '#',
   },
   {
@@ -140,6 +143,7 @@ Designed and developed REST API and database for handling user-generated product
       'NGINX',
     ],
     imageUrl: unZwillingBackend,
+    repoUrl: '#',
     siteUrl: '#',
   },
 ] as const;

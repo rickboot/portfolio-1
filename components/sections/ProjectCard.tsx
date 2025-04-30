@@ -14,6 +14,7 @@ export function ProjectCard({
   tags,
   imageUrl,
   siteUrl,
+  repoUrl,
 }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +43,16 @@ export function ProjectCard({
           <p className='mt-1 whitespace-break-spaces text-[.7rem] tracking-wide text-[--shadowfax-white]'>
             {description}
           </p>
-
+          {repoUrl && repoUrl !== '#' && (
+            <a
+              href={repoUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='mt-3 text-[.8rem] text-[--daphne-blue] underline'
+            >
+              Github
+            </a>
+          )}
           {siteUrl && siteUrl !== '#' && (
             <a
               href={siteUrl}
