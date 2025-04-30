@@ -90,7 +90,7 @@ export const projectsData = [
       'Markdown',
     ],
     imageUrl: '/shadowforge.png',
-    siteUrl: 'https://shadowforge.vercel.app',
+    siteUrl: 'https://shadow-forge.vercel.app',
   },
   {
     title: 'Finance Dashboard',
