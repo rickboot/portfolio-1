@@ -1,10 +1,9 @@
 import About from '@/components/sections/About';
-import Contact from '@/components/sections/Contact';
 import Experience from '@/components/sections/Experience';
 import Intro from '@/components/sections/Intro';
 import Projects from '@/components/sections/Projects';
-import SectionDivider from '@/components/SectionDivider';
 import Skills from '@/components/sections/Skills';
+// import SectionDivider from '@/components/SectionDivider';
 
 export default function Home() {
   return (
