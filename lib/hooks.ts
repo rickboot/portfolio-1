@@ -1,15 +1,16 @@
-"use client";
-import { useActiveSectionContext } from "@/contexts/active-section-context";
-import { UseInViewOptions, useInView } from "framer-motion";
-import { links } from "@/lib/data";
-import { useEffect } from "react";
+'use client';
+import { useActiveSectionContext } from '@/contexts/active-section-context';
+import { UseInViewOptions, useInView } from 'framer-motion';
+import { links } from '@/lib/constants';
+import { useEffect, useState } from 'react';
 
 export function useSectionInView(
-  ref: React.RefObject<HTMLElement>,
-  sectionName: (typeof links)[number]["name"],
-  amountInView: UseInViewOptions["amount"],
+  ref: React.RefObject<HTMLElement | null>,
+  sectionName: (typeof links)[number]['name'],
+  amountInView: UseInViewOptions['amount'],
 ): void {
   const inView = useInView(ref, { amount: amountInView });
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const {
     setActiveSection,
@@ -17,11 +18,26 @@ export function useSectionInView(
     setLastTimeActiveSectionChanged,
   } = useActiveSectionContext();
 
-  // useEffect needed to avoid rendering during setState changes
+  // Set up scroll listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!hasScrolled) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasScrolled]);
+
+  // Handle section activation
   useEffect(() => {
     if (inView && Date.now() - lastTimeActiveSectionChanged > 50) {
-      setActiveSection(sectionName);
-      setLastTimeActiveSectionChanged(Date.now());
+      // Only allow non-Home sections to become active after scroll
+      if (sectionName === 'Home' || hasScrolled) {
+        setActiveSection(sectionName);
+        setLastTimeActiveSectionChanged(Date.now());
+      }
     }
   }, [
     inView,
@@ -29,5 +45,6 @@ export function useSectionInView(
     setActiveSection,
     lastTimeActiveSectionChanged,
     setLastTimeActiveSectionChanged,
+    hasScrolled,
   ]);
 }

@@ -1,42 +1,41 @@
 {
   "name": "portfolio_1",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.11.5",
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
-    "@vercel/analytics": "^1.1.2",
-    "autoprefixer": "10.4.17",
-    "clsx": "^2.1.0",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "framer-motion": "^10.18.0",
-    "next": "14.1.0",
-    "postcss": "8.4.33",
+    "@tailwindcss/postcss": "^4.1.5",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.3",
+    "@vercel/analytics": "^1.5.0",
+    "autoprefixer": "10.4.21",
+    "clsx": "^2.1.1",
+    "eslint": "9.26.0",
+    "eslint-config-next": "15.4.0-canary.18",
+    "framer-motion": "^12.9.4",
+    "next": "^15.3.1",
+    "postcss": "8.5.3",
     "postcss-apply": "^0.12.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.0.1",
-    "react-tsparticles": "^2.12.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
     "react-vertical-timeline-component": "^3.6.0",
-    "resend": "^3.1.0",
-    "tailwindcss": "3.4.1",
-    "tsparticles": "^3.8.1",
-    "tsparticles-slim": "^2.12.0",
-    "typescript": "5.3.3"
+    "resend": "^4.5.0",
+    "tailwindcss": "4.1.5",
+    "typescript": "5.8.3"
   },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.6",
-    "prettier": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.11"
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "prettier": {
     "plugins": [
@@ -44,5 +43,14 @@
     ],
     "singleQuote": true,
     "jsxSingleQuote": true
-  }
+  },
+  "overrides": {
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }

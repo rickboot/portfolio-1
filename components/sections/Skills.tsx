@@ -28,7 +28,7 @@ export default function Skills() {
         {skillsData.map((skill, index) => (
           <motion.li
             key={skill}
-            className='rounded-md bg-[--shadowfax-white] px-2 py-1 text-[1rem] tracking-wide text-[--raven-black]'
+            className='rounded-md bg-[var(--background)] px-2 py-1 text-[1rem] tracking-wide text-[var(--foreground)]'
             variants={animationVariants}
             initial='initial'
             whileInView='animate'

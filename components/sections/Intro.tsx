@@ -5,84 +5,96 @@ import Image from 'next/image';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
+import { SOCIAL_LINKS } from '../../lib/constants';
+
+const fadeInScale = {
+  initial: { opacity: 0, scale: 0 },
+  animate: { opacity: 1, scale: 1 },
+  transition: {
+    type: 'spring',
+    stiffness: 80,
+    delay: 0.1,
+    duration: 0.5,
+  },
+};
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 100 },
+  animate: { opacity: 1, y: 0 },
+  transition: {
+    type: 'spring',
+    stiffness: 80,
+    delay: 0.2,
+    duration: 0.5,
+  },
+};
+
+const actionButtonClasses =
+  'items-center rounded-full bg-[var(--accent)] px-4 py-1 text-[.9rem] text-[var(--raven-black)] transition outline-none hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90';
+const iconButtonClasses =
+  'items-center rounded-full bg-[var(--accent)] p-2 text-[var(--raven-black)] transition outline-none hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90';
 
 export default function Intro() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   useSectionInView(ref, 'Home', 1);
 
   return (
-    <header ref={ref} id='home' className='mb-16 mt-8 scroll-mt-32'>
+    <header ref={ref} id='home' className='mt-8 mb-16 scroll-mt-32'>
       <div className='flex items-center justify-center'>
-        <motion.h1
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 80,
-            delay: 0.1,
-            duration: 1,
-          }}
-        >
-          <Image
-            className='h-32 w-32 rounded-full border-[0.25rem] border-[--daphne-blue] object-cover shadow-lg shadow-white/[0.2]'
-            src='/rick.png'
-            alt='Rick'
-            width='100'
-            height='100'
-            quality='100'
-            priority={true}
-          />
-        </motion.h1>
+        <div className='relative'>
+          <motion.div {...fadeInScale}>
+            <Image
+              className='h-32 w-32 rounded-full border-1 border-[var(--accent)] object-cover shadow-[var(--foreground)]/[0.2] shadow-lg'
+              src='/rick.png'
+              alt='Rick Allen - Full Stack Developer'
+              width={128}
+              height={128}
+              quality={85}
+              priority
+            />
+          </motion.div>
+        </div>
       </div>
 
-      <p className='mt-10 px-4 text-center text-[2rem] font-medium text-[--raven-black] dark:text-[--shadowfax-white] sm:px-16 lg:px-48'>
+      <h1 className='mt-10 px-4 text-center text-[2rem] font-medium text-[var(--foreground)] sm:px-16 lg:px-48'>
         Full-Stack Software Developer
-      </p>
+      </h1>
 
       <motion.div
         className='mt-10 flex items-center justify-center gap-4 px-4 text-lg font-medium'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          type: 'spring',
-          stiffness: 80,
-          delay: 0.2,
-          duration: 1,
-        }}
+        {...fadeInUp}
       >
         <a
-          href='https://drive.google.com/file/d/17BbUlqIwkmL7JTemTS8xkmhlOEqedeq0/view?usp=drive_link'
-          download='true'
-          className='items-center rounded-full bg-[--daphne-blue] px-4 py-1 text-[.9rem] text-[--raven-black]
-          outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90'
+          href={SOCIAL_LINKS.RESUME}
+          download='rick-allen-resume.pdf'
+          className={actionButtonClasses}
         >
           Resume
         </a>
 
         <a
-          href='mailto:rickallen@google.com'
-          className='items-center rounded-full bg-[--daphne-blue] px-4 py-1 text-[.9rem]
-          text-[--raven-black] outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90'
+          href={`mailto:${SOCIAL_LINKS.EMAIL}`}
+          className={actionButtonClasses}
         >
           Email Me
         </a>
 
         <a
-          href='https://www.linkedin.com/in/rickallen7/'
+          href={SOCIAL_LINKS.LINKEDIN}
           target='_blank'
           rel='noopener noreferrer'
-          aria-label='LinkedIn'
-          className='items-center rounded-full bg-[--daphne-blue]  p-2 text-[--raven-black] outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90 '
+          aria-label='Visit Rick Allen LinkedIn profile'
+          className={iconButtonClasses}
         >
           <BsLinkedin className='text-[1.2rem]' />
         </a>
 
         <a
-          href='https://github.com/rickboot'
+          href={SOCIAL_LINKS.GITHUB}
           target='_blank'
           rel='noopener noreferrer'
-          aria-label='Github'
-          className='items-center rounded-full bg-[--daphne-blue]  p-2 text-[--raven-black] outline-none transition hover:scale-110 hover:opacity-90 focus:scale-110 focus:opacity-90 '
+          aria-label='Visit Rick Allen GitHub profile'
+          className={iconButtonClasses}
         >
           <FaGithubSquare className='text-[1.2rem]' />
         </a>

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,6 +8,15 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'daphne-blue': 'var(--daphne-blue)',
+        'daphne-blue-dark': 'var(--daphne-blue-dark)',
+        'sonic-blue': 'var(--sonic-blue)',
+        'gray-blue': 'var(--gray-blue)',
+        'shadowfax-white': 'var(--shadowfax-white)',
+        'misty-gray': 'var(--misty-gray)',
+        'raven-black': 'var(--raven-black)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -32,8 +32,8 @@ export default function Contact() {
     >
       <SectionHeader>Contact</SectionHeader>
 
-      <div className='mb-36 rounded-lg border border-[--misty-gray] px-10 py-8 sm:w-[32rem]'>
-        <p className='text-[0.9rem] text-[--raven-black] dark:text-[--shadowfax-white]'>
+      <div className='mb-36 rounded-lg border border-[var(--surface-contrast)] px-10 py-8 sm:w-[32rem]'>
+        <p className='text-[0.9rem] text-[var(--foreground)] dark:text-[--shadowfax-white]'>
           You may contact me using this form or at{' '}
           <a href='mailto:rickallen@gmail.com' className='underline'>
             rickallen@gmail.com
@@ -43,7 +43,7 @@ export default function Contact() {
         <form action={handleSubmit} className='mt-6 flex flex-col'>
           <label
             htmlFor='email'
-            className='mb-2 mt-4 px-1 text-[0.8rem] text-[--raven-black] dark:text-[--shadowfax-white]'
+            className='mt-4 mb-2 px-1 text-[0.8rem] text-[var(--foreground)]'
           >
             Email
           </label>
@@ -55,12 +55,12 @@ export default function Contact() {
             autoComplete='email'
             required
             maxLength={50}
-            className='h-10 rounded-lg border border-[--misty-gray] bg-slate-200 px-2 py-1 text-sm text-[--raven-black]'
+            className='h-10 rounded-lg border border-[var(--surface-contrast)] bg-[var(--shadowfax-white)] px-2 py-1 text-sm text-[var(--raven-black)]'
           />
 
           <label
             htmlFor='message'
-            className='mb-2 mt-4 px-1 text-[0.8rem] text-[--raven-black] dark:text-[--shadowfax-white]'
+            className='mt-4 mb-2 px-1 text-[0.8rem] text-[var(--foreground)]'
           >
             Message
           </label>
@@ -69,13 +69,13 @@ export default function Contact() {
             name='message'
             placeholder='Enter message here...'
             maxLength={1000}
-            className='h-40 rounded-lg border border-[--misty-gray] bg-slate-200 px-3 py-2 text-sm text-[--raven-black]'
+            className='h-40 rounded-lg border border-[var(--surface-contrast)] bg-[var(--shadowfax-white)] px-3 py-2 text-sm text-[var(--raven-black)]'
           />
 
           <button
             name='submit'
             type='submit'
-            className='m-auto mt-7 w-[8rem] rounded-lg bg-[--daphne-blue] p-2 text-[--raven-black] outline-none transition hover:scale-105 hover:opacity-90'
+            className='m-auto mt-7 w-[8rem] rounded-lg bg-[var(--accent)] p-2 text-[var(--raven-black)] transition outline-none hover:scale-105 hover:opacity-90'
             aria-label='Submit contact form'
           >
             Submit

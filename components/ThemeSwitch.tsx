@@ -1,18 +1,31 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsSun, BsMoon } from 'react-icons/bs';
-import { useThemeContext } from '@/contexts/theme-context';
 
 export default function ThemeSwitchButton() {
-  const { theme, toggleTheme } = useThemeContext();
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const isDarkStored = localStorage.getItem('darkMode') === 'true';
+    setIsDark(isDarkStored);
+    document.documentElement.classList.toggle('dark', isDarkStored);
+  }, []);
+
+  const toggleTheme = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    localStorage.setItem('darkMode', String(newIsDark));
+    document.documentElement.classList.toggle('dark', newIsDark);
+  };
 
   return (
     <button
       aria-label='Toggle theme'
-      className='fixed right-0 top-0 z-50 m-3 rounded-full bg-opacity-0 p-3 text-[1.2rem] text-[--raven-black] transition-all hover:scale-110 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[--daphne-blue] focus:ring-offset-2 dark:text-[--raven-black] dark:hover:bg-gray-800 sm:dark:text-[--shadowfax-white]'
+      // className='bg-opacity-0 fixed top-0 right-0 z-50 m-3 rounded-full p-3 text-[1.2rem] text-[var(--foreground)] transition-all hover:scale-110 hover:bg-gray-100 dark:text-[var(--foreground)] dark:hover:bg-gray-800'
+      className='bg-opacity-0 fixed top-0 right-0 z-50 m-3 rounded-full p-3 text-[1.2rem] text-[var(--foreground)] transition-all hover:scale-110 hover:bg-gray-100 focus:ring-[var(--accent)] focus:ring-offset-2 focus:outline-none dark:text-[var(--foreground)] dark:hover:bg-gray-800'
       onClick={toggleTheme}
     >
-      {theme === 'light' ? <BsMoon /> : <BsSun />}
+      {isDark ? <BsSun /> : <BsMoon />}
     </button>
   );
 }
