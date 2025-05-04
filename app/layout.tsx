@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='scroll-smooth'>
       <body
-        className={`${inter.className} pt-24 transition-colors duration-200 sm:pt-32`}
+        className={`${inter.className} pt-24 transition-colors duration-200`}
       >
         <ActiveSectionContextProvider>
           <Nav />

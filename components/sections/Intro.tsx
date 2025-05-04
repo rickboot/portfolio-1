@@ -39,12 +39,12 @@ export default function Intro() {
   useSectionInView(ref, 'Home', 1);
 
   return (
-    <header ref={ref} id='home' className='mt-8 mb-16 scroll-mt-32'>
+    <header ref={ref} id='home' className='mt-8 mb-8 scroll-mt-32'>
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div {...fadeInScale}>
             <Image
-              className='h-32 w-32 rounded-full border-1 border-[var(--accent)] object-cover shadow-[var(--foreground)]/[0.2] shadow-lg'
+              className='h-48 w-48 rounded-full border-1 border-[var(--accent)] object-cover shadow-[var(--foreground)]/[0.2] shadow-lg'
               src='/rick.png'
               alt='Rick Allen - Full Stack Developer'
               width={128}
