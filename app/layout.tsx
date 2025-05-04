@@ -21,16 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='scroll-smooth bg-[var(--background)]'>
+    <html lang='en' className='scroll-smooth'>
       <body
-        className={`${inter.className} bg-[var(--background)] pt-24 text-[var(--foreground)] transition-colors duration-200 sm:pt-32`}
+        className={`${inter.className} pt-24 transition-colors duration-200 sm:pt-32`}
       >
-        {/* Ambient glow effect */}
-        <div
-          className='fixed top-[-10rem] right-[-11rem] -z-10 h-[30rem] w-[2rem] rounded-full bg-[#19334F] opacity-40 blur-[10rem] sm:right-[-20rem] sm:w-[68.75rem]'
-          aria-hidden='true'
-        />
-
         <ActiveSectionContextProvider>
           <Nav />
           {children}
