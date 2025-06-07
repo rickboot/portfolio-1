@@ -1,0 +1,18 @@
+{
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+    {
+        "source": "/(.*)",
+        "has": [{ "type": "host", "value": "rickallen.rocks" }],
+        "destination": "https://rickallen.dev/:1",
+        "permanent": true
+    },
+    {
+        "source": "/(.*)",
+        "has": [{ "type": "host", "value": "www.rickallen.rocks" }],
+        "destination": "https://rickallen.dev/:1",
+        "permanent": true
+    }
+    ]
+}

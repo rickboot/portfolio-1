@@ -46,7 +46,7 @@ export function ProjectCard({
                 href={repoUrl}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='mt-3 text-[.8rem] text-[var(--accent)] underline'
+                className='mt-3 text-[.8rem] text-[var(--sonic-blue)] underline'
               >
                 Github
               </a>
@@ -56,7 +56,7 @@ export function ProjectCard({
                 href={siteUrl}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='mt-3 text-[.8rem] text-[var(--accent)] underline'
+                className='mt-3 text-[.8rem] text-[var(--sonic-blue)] underline'
               >
                 See it!
               </a>
