@@ -2,7 +2,7 @@
 
 This is my personal developer portfolio, built with Next.js, Tailwind CSS, and TypeScript. It showcases selected projects, skills, and experience in a clean, responsive design — with dark mode, animations, and a custom contact form powered by server actions.
 
-**Live Site**: [rickallen-portfolio.vercel.app](https://rickallen-portfolio.vercel.app)  
+**Live Site**: [rickallen.dev](https://rickallen.dev)  
 **Resume**: [Download PDF](https://drive.google.com/uc?export=download&id=1W9SzH2MGlBl2AgXhaeZGz08uczw6M3pA)
 
 ---

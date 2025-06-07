@@ -16,7 +16,7 @@ export default function About() {
       <SectionHeader>About Me</SectionHeader>
 
       <p className='mb-3 text-center text-[1rem] leading-8 font-light text-[var(--foreground)]'>
-        I'm a <strong>problem solver</strong> who loves to code. My tools of
+        I am a <strong>problem solver</strong> who loves to code. My tools of
         choice are <strong>React</strong> and <strong>Next.js</strong>, backed
         by a strong knowledge of <strong>HTML5/CSS3</strong>,{' '}
         <strong>JavaScript</strong>, and <strong>TypeScript</strong>.
