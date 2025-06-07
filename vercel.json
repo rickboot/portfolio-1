@@ -3,15 +3,15 @@
     "trailingSlash": false,
     "redirects": [
     {
-        "source": "/(.*)",
+        "source": "/:path*",
         "has": [{ "type": "host", "value": "rickallen.rocks" }],
-        "destination": "https://rickallen.dev/:1",
+        "destination": "https://rickallen.dev/:path",
         "permanent": true
     },
     {
-        "source": "/(.*)",
+        "source": "/:path*",
         "has": [{ "type": "host", "value": "www.rickallen.rocks" }],
-        "destination": "https://rickallen.dev/:1",
+        "destination": "https://rickallen.dev/:path",
         "permanent": true
     }
     ]
