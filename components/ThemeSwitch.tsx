@@ -4,19 +4,29 @@ import { BsSun, BsMoon } from 'react-icons/bs';
 
 export default function ThemeSwitchButton() {
   const [isDark, setIsDark] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const isDarkStored = localStorage.getItem('darkMode') === 'true';
-    setIsDark(isDarkStored);
-    document.documentElement.classList.toggle('dark', isDarkStored);
+    setMounted(true);
+    if (typeof window !== 'undefined') {
+      const isDarkStored = localStorage.getItem('darkMode') === 'true';
+      setIsDark(isDarkStored);
+      document.documentElement.classList.toggle('dark', isDarkStored);
+    }
   }, []);
 
   const toggleTheme = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
-    localStorage.setItem('darkMode', String(newIsDark));
-    document.documentElement.classList.toggle('dark', newIsDark);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('darkMode', String(newIsDark));
+      document.documentElement.classList.toggle('dark', newIsDark);
+    }
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
